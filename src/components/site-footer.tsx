@@ -1,6 +1,6 @@
-import react from ""
-import Link from "next/link"
-import { Facebook, Instagram, Twitter } from "lucide-react"
+"use client";
+import Link from "next/link";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function SiteFooter() {
   return (
@@ -8,9 +8,12 @@ export default function SiteFooter() {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">OceanTrade</h3>
+            <h3 className="text-lg font-semibold mb-4">
+              Parspro India private Limited
+            </h3>
             <p className="text-sm text-primary-foreground/80">
-              Premium quality products for your everyday needs. Discover the difference with OceanTrade.
+              Premium quality products for your everyday needs. Discover the
+              difference with Parspro.
             </p>
           </div>
           <div>
@@ -19,21 +22,6 @@ export default function SiteFooter() {
               <li>
                 <Link href="/products" className="hover:underline">
                   All Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/category/electronics" className="hover:underline">
-                  Electronics
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/category/clothing" className="hover:underline">
-                  Clothing
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/category/home" className="hover:underline">
-                  Home & Living
                 </Link>
               </li>
             </ul>
@@ -52,58 +40,49 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="hover:underline">
+                <Link href="/#" className="hover:underline">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:underline">
+                <Link href="/#" className="hover:underline">
                   Blog
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/help" className="hover:underline">
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="/shipping" className="hover:underline">
-                  Shipping Information
-                </Link>
-              </li>
-              <li>
-                <Link href="/returns" className="hover:underline">
-                  Returns & Exchanges
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="hover:underline">
-                  FAQ
-                </Link>
-              </li>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-2">
+              <li className="text-sm text-white">info@parsproindia.com</li>
+              <li className="text-sm text-white"> (+91) 7004258062</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} OceanTrade. All rights reserved.
+            © {new Date().getFullYear()} Parspro. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-primary-foreground hover:text-primary-foreground/80">
+            <Link
+              href="https://www.facebook.com/share/1AH5U9dsZY/"
+              className="text-primary-foreground hover:text-primary-foreground/80"
+            >
               <Facebook className="h-5 w-5" />
               <span className="sr-only">Facebook</span>
             </Link>
-            <Link href="#" className="text-primary-foreground hover:text-primary-foreground/80">
+            <Link
+              href="#"
+              className="text-primary-foreground hover:text-primary-foreground/80"
+            >
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </Link>
-            <Link href="#" className="text-primary-foreground hover:text-primary-foreground/80">
+            <Link
+              href="#"
+              className="text-primary-foreground hover:text-primary-foreground/80"
+            >
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Link>
@@ -111,6 +90,5 @@ export default function SiteFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

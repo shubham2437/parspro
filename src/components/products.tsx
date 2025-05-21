@@ -11,7 +11,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const encrpt_id = encrypt(product.id);
+  const encrpt_id = encodeURIComponent(encrypt(product.id));
   const [isLoading, setIsLoading] = useState(false);
 
   return (

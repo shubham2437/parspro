@@ -8,6 +8,7 @@ import { Product } from "@/static-data/product";
 import { encrypt } from "@/lib/route";
 import LoadingSpinner from "./spinner";
 import { useState } from "react";
+import Image from "next/image";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const encrpt_id = encrypt(product.id);
@@ -22,11 +23,13 @@ const ProductCard = ({ product }: { product: Product }) => {
               <LoadingSpinner />
             </div>
           ) : (
-            <img
+            <Image
               src={product.images[0]}
               alt={product.name}
+              width={500}
+              height={500}
               className="w-full h-full object-fit transition-transform duration-500 hover:scale-101"
-              onLoad={() => setIsLoading(true)}
+              onLoadingComplete={() => setIsLoading(false)}
             />
           )}
           {product.isBestSeller && (

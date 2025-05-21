@@ -5,6 +5,7 @@ import "./globals.css"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
 import { Toaster } from "@/components/ui/sonner"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,6 +30,8 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <Toaster />
+        <Analytics />
+
       </body>
     </html>
   )

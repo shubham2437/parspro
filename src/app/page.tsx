@@ -2,7 +2,6 @@
 import { ArrowRight, CheckCircle, Shield, Sparkles } from "lucide-react";
 import TestimonialCard from "@/components/testimonials";
 import FeatureCard from "@/components/features";
-
 import Hero from "@/components/Hero";
 import Ourproduct from "@/components/featured-product";
 

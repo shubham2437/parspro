@@ -24,9 +24,11 @@ const Page = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredProducts =
-    activeFilter === "bestsellers"
-      ? toiletCleanerProducts.filter((product) => product.isBestSeller)
-      : toiletCleanerProducts;
+    // activeFilter === "bestsellers"
+    //   ? toiletCleanerProducts.filter((product) => product.isBestSeller)
+      // :
+       toiletCleanerProducts;
+
 
   return (
     <>

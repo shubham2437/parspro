@@ -11,7 +11,7 @@ import Link from "next/link";
 import { toast } from "sonner";
 import { useParams } from "next/navigation";
 import ImageGallery from "@/components/ImageGallary";
-import { decrypt } from "@/lib/route";
+import { decrypt, encrypt } from "@/lib/route";
 
 const ProductPage = () => {
   const { id }: any = useParams();
@@ -20,7 +20,6 @@ const ProductPage = () => {
   const decryptedId = decrypt(decodeURIComponent(id));
 
   const product = getProductById(decryptedId);
-  console.log(id, "dfuid");
 
   // useEffect(() => {
   //   if (!product) {
@@ -30,7 +29,6 @@ const ProductPage = () => {
 
   //   document.title = `${product.name} - ProductShowcase`;
   // }, [product, navigate]);
-
 
   if (!product) return <div>Product not found</div>;
   if (!product) {
@@ -168,7 +166,9 @@ const ProductPage = () => {
               .map((relatedProduct) => (
                 <Link
                   key={relatedProduct.id}
-                  href={`/products/${relatedProduct.id}`}
+                  href={`/products/${encodeURIComponent(
+                    encrypt(relatedProduct.id)
+                  )}`}
                   className="group"
                 >
                   <div className="aspect-square overflow-hidden rounded-lg bg-muted">

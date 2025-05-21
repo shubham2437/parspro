@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 interface ImageGalleryProps {
   images: string[];
   productName: string;
@@ -23,10 +24,12 @@ const ImageGallery = ({ images, productName }: ImageGalleryProps) => {
   return (
     <div className="flex flex-col space-y-4">
       <div className="relative  overflow-hidden rounded-lg bg-muted ">
-        <img
+        <Image
           src={images[activeIndex]}
           alt={`${productName} - View ${activeIndex + 1}`}
-          className=""
+          width={500}
+          height={500}
+          className="item-center  w-full object-cover transition-transform duration-500 hover:scale-90"
         />
         
         <button 
